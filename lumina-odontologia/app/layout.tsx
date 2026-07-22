@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ui/header";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${geist.className} min-h-screen`}>
+        <Header />
         {children}
       </body>
     </html>
